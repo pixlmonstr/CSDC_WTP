@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Exercise 1 - Feedback</title>
+    <body>
+        <h1>Website Feedback Form</h1>
+        <form action="main.html" method="post">
+            <p>Is this the first time you have visited the website?</p>
+            <div>
+                <input type="radio" id="previously_visited_1" name="previously_visited" value="1">
+                <label for="previously_visited_1">yes</label>
+                <input type="radio" id="previously_visited_0" name="previously_visited" value="0">
+                <label for="previously_visited_0">no</label>
+            </div>
+            <p>What is the PRIMARY reason you came to the website?</p>
+            <textarea rows="5" name="primary_reason"></textarea>
+            <p>Did you find what you needed?</p>
+            <div>
+                <input type="radio" id="found_all_2" name="found_all" value="2">
+                <label for="found_all_2">Yes, all of it</label>
+                <input type="radio" id="found_all_1" name="found_all" value="1">
+                <label for="found_all_1">Yes, some of it</label>
+                <input type="radio" id="found_all_0" name="found_all" value="0">
+                <label for="found_all_0">No, none of it</label>
+            </div>
+            <p>If you did not find any or all of what you needed, please tell us what information you were looking for.</p>
+            <textarea rows="5" name="what_not_found"></textarea>
+            <p>Please tell us how easy it is to find information on the site.</p>
+            <div>
+                <input type="radio" id="find_difficult_0" name="find_difficult" value="0">
+                <label for="find_difficult_0">Very Easy</label>
+                <input type="radio" id="find_difficult_1" name="find_difficult" value="1">
+                <label for="find_difficult_1">Easy</label>
+                <input type="radio" id="find_difficult_2" name="find_difficult" value="2">
+                <label for="find_difficult_2">Average</label>
+                <input type="radio" id="find_difficult_3" name="find_difficult" value="3">
+                <label for="find_difficult_3">Difficult</label>
+                <input type="radio" id="find_difficult_4" name="find_difficult" value="4">
+                <label for="find_difficult_4">Very Difficult</label>
+            </div>
+            <p>What is the overall impression of the site?</p>
+            <table>
+                <thead>
+                    <th></th>
+                    <th>Below Expecations</th>
+                    <th>Meets Expecations</th>
+                    <th>Exceeds Expecations</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Professional</td>
+                        <td><input type="radio" name="expectations_professional" value="0"></td>
+                        <td><input type="radio" name="expectations_professional" value="1"></td>
+                        <td><input type="radio" name="expectations_professional" value="2"></td>
+                    </tr>
+                    <tr>
+                        <td>Informative</td>
+                        <td><input type="radio" name="expectations_informative" value="0"></td>
+                        <td><input type="radio" name="expectations_informative" value="1"></td>
+                        <td><input type="radio" name="expectations_informative" value="2"></td>
+                    </tr>
+                    <tr>
+                        <td>Visually Pleasing</td>
+                        <td><input type="radio" name="expectations_visually" value="0"></td>
+                        <td><input type="radio" name="expectations_visually" value="1"></td>
+                        <td><input type="radio" name="expectations_visually" value="2"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                Please add any comments you have for improving the website. We welcome suggestions on specific areas for<br>
+                improvements, features you would like to see added to the site, and examples of what you consider goog websites.
+            </p>
+            <textarea name="comments"rows="5"></textarea>
+            <p>We would like to know a little bit about you</p>
+            <div>
+                <label for="email">eMail:</label>
+                <input type="email" name="email" id="email" placeholder="user@example.com" required>
+                <label for="homepage">Your Homepage:</label>
+                <input type="url" name="homepage" id="homepage" placeholder="http://www.example.com/">
+                <label for="date_of_birth">Date of birth:</label>
+                <input type="date" name="date_of_birth" id="date_of_birth">
+            </div>
+            <input type="submit" value="Send">
+        </form>
+    </body>
+</html>
