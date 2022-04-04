@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <meta charset="UTF-8">
+    <meta name="description" content="Bookshop">
+    <meta name="keywords" content="HTML, JavaScript, Books">
+    <meta name="author" content="Max Mustermann">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 1 - Bookstore</title>
     <body>
         <header>
@@ -17,122 +21,126 @@
             </ul>
         </nav>
         <main>
-            <h2 id="html5">HTML5 Books</h2>
-            <div>
-                <h3>HTML5: Up & Running</h3>
-                <img src="images/HTML5_Up_And_Running.jpg" alt="Cover of HTML5: Up & Running" />
-                <p>
-                    <label for="qty_book_0">Quantity:</label>
-                    <select id="qty_book_0">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                    <button>Add to cart</button>
-                </p>
-                <p>
-                    Price: 24,8 €
-                </p>
-                <p>
-                    If you don't know about the new features available in HTML5, now's the time to find out. This book provides practical information about how <br>
-                    and why the latest version of this markup language will significantly change the way you develop for the Web.
-                </p>
-                <p>
-                    ISBN: 9780596806026
-                </p>
-            </div>
-            <div>
-                <h3>HTML5 Pocket Reference</h3>
-                <img src="images/HTML5_Pocket_Reference.jpg" alt="Cover of HTML5 Pocket Reference" />
-                <p>
-                    <label for="qty_book_1">Quantity:</label>
-                    <select id="qty_book_1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                    <button>Add to cart</button>
-                </p>
-                <p>
-                    Price: 15,9 €
-                </p>
-                <p>
-                    Need help finding the right HTML5 element or attribute for your web page or application? HTML5 Pocket Reference is the classic reference<br>
-                    that web designers and developers have been keeping close at hand for more than thirteen years.
-                </p>
-                <p>
-                    ISBN: 9781449363352
-                </p>
-            </div>
-            <h2 id="javascript">JavaScript Books</h2>
-            <div>
-                <h3>JavaScript: The Definitive Guide</h3>
-                <img src="images/JavaScript_The_Definitive_Guide.jfif" alt="Cover of JavaScript: The Definitive Guide" />
-                <p>
-                    <label for="qty_book_2">Quantity:</label>
-                    <select id="qty_book_2">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                    <button>Add to cart</button>
-                </p>
-                <p>
-                    Price: 47,3 €
-                </p>
-                <p>
-                    This Fifth Edition is completely revised and expanded to cover JavaScript as it is used in today's Web 2.0 applications. This book is both an<br>
-                    example-driven programmer's guide and a keep-on-your-desk reference, with new chapters that explain everything you need to know to get<br>
-                    the most out of JavaScript
-                </p>
-                <p>
-                    ISBN: 9780596805524
-                </p>
-            </div>
-            <div>
-                <h3>JavaScript: The Good Parts</h3>
-                <img src="images/JavaScript_The_Good_Parts.jfif" alt="Cover of JavaScript: The Good Parts" />
-                <p>
-                    <label for="qty_book_3">Quantity:</label>
-                    <select id="qty_book_3">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                    <button>Add to cart</button>
-                </p>
-                <p>
-                    Price: 23,9 €
-                </p>
-                <p>
-                    Most programming languages contain good and bad parts, but JavaScript has more than its share of the bad, having been developed and<br>
-                    released in a hurry before it could be refined.
-                </p>
-                <p>
-                    ISBN: 9780596517748
-                </p>
-            </div>
+            <section>
+                <h2 id="html5">HTML5 Books</h2>
+                <article>
+                    <h3>HTML5: Up & Running</h3>
+                    <img src="images/HTML5_Up_And_Running.jpg" alt="Cover of HTML5: Up & Running" />
+                    <p>
+                        <label for="qty_book_0">Quantity:</label>
+                        <select id="qty_book_0">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <button>Add to cart</button>
+                    </p>
+                    <p>
+                        Price: 24,8 €
+                    </p>
+                    <p>
+                        If you don't know about the new features available in HTML5, now's the time to find out. This book provides practical information about how <br>
+                        and why the latest version of this markup language will significantly change the way you develop for the Web.
+                    </p>
+                    <p>
+                        ISBN: 9780596806026
+                    </p>
+                </article>
+                <article>
+                    <h3>HTML5 Pocket Reference</h3>
+                    <img src="images/HTML5_Pocket_Reference.jpg" alt="Cover of HTML5 Pocket Reference" />
+                    <p>
+                        <label for="qty_book_1">Quantity:</label>
+                        <select id="qty_book_1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <button>Add to cart</button>
+                    </p>
+                    <p>
+                        Price: 15,9 €
+                    </p>
+                    <p>
+                        Need help finding the right HTML5 element or attribute for your web page or application? HTML5 Pocket Reference is the classic reference<br>
+                        that web designers and developers have been keeping close at hand for more than thirteen years.
+                    </p>
+                    <p>
+                        ISBN: 9781449363352
+                    </p>
+                </article>
+            </section>
+            <section>
+                <h2 id="javascript">JavaScript Books</h2>
+                <article>
+                    <h3>JavaScript: The Definitive Guide</h3>
+                    <img src="images/JavaScript_The_Definitive_Guide.jfif" alt="Cover of JavaScript: The Definitive Guide" />
+                    <p>
+                        <label for="qty_book_2">Quantity:</label>
+                        <select id="qty_book_2">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <button>Add to cart</button>
+                    </p>
+                    <p>
+                        Price: 47,3 €
+                    </p>
+                    <p>
+                        This Fifth Edition is completely revised and expanded to cover JavaScript as it is used in today's Web 2.0 applications. This book is both an<br>
+                        example-driven programmer's guide and a keep-on-your-desk reference, with new chapters that explain everything you need to know to get<br>
+                        the most out of JavaScript
+                    </p>
+                    <p>
+                        ISBN: 9780596805524
+                    </p>
+                </article>
+                <article>
+                    <h3>JavaScript: The Good Parts</h3>
+                    <img src="images/JavaScript_The_Good_Parts.jfif" alt="Cover of JavaScript: The Good Parts" />
+                    <p>
+                        <label for="qty_book_3">Quantity:</label>
+                        <select id="qty_book_3">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <button>Add to cart</button>
+                    </p>
+                    <p>
+                        Price: 23,9 €
+                    </p>
+                    <p>
+                        Most programming languages contain good and bad parts, but JavaScript has more than its share of the bad, having been developed and<br>
+                        released in a hurry before it could be refined.
+                    </p>
+                    <p>
+                        ISBN: 9780596517748
+                    </p>
+                </article>
+            </section>
         </main>
         <aside>
             <h2>Shopping Cart</h2>
             <p>Sum: 0 €</p>
         </aside>
         <footer>
-            <p>
-                <a href="#">Go to Top</a>
-            </p>
+            <p><a href="#">Go to Top</a></p>
             &copy; Bookshop<br>
-            Written by <a href="mailto:janedoe@example.com">Max Mustermann</a><br>
-            Visit us at: <a href="https://www.fh-campuswien.ac.at/">FH Campus Vienna</a><br>
-            1100 Vienna, Austria
+            <address>
+                Written by <a href="mailto:janedoe@example.com">Max Mustermann</a><br>
+                Visit us at: <a href="https://www.fh-campuswien.ac.at/">FH Campus Vienna</a><br>
+                1100 Vienna, Austria
+            </address>
         </footer>
     </body>
 </html>
