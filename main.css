@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+a {
+    color: black;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+
+header > h1 {
+    display: inline;
+}
+
+header > img {
+    height: 2em;
+    width: auto;
+}
+
+header {
+    text-align: center;
+}
+
+
+body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "main main"
+        "footer aside";
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+aside {
+    grid-area: aside;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    overflow: scroll;
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header, nav, main, footer, aside {
+    padding: 5px;
+}
+
+footer {
+    text-align: center;
+    font-size: smaller;
+}
+
+aside {
+    text-align: right;
+}
+
+header {
+    background: linear-gradient(#c74ad8, #a224c2);
+}
+
+nav {
+    background: linear-gradient(#a224c2, #7c14a5);
+}
+
+footer, aside {
+    background: linear-gradient(#4a84cf, #054292);
+}
+
+main {
+    background: white;
+}
+
+main img {
+    width: 70%;
+    height: auto;
+}
+
+@media screen and (min-width: 768px) {
+    nav > ul {
+        flex-direction: column;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header header header"
+            "nav main aside"
+            "footer footer footer";
+    }
+
+    main img {
+        width: auto;
+    }
+
+    aside {
+        background: linear-gradient(#a224c2, #7c14a5);
+    }
+
+    footer {
+        background: linear-gradient(#7c14a5, #480663);
+        color: white;
+    }
+
+    footer a {
+        color: inherit;
+    }
+}
