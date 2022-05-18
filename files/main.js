@@ -117,6 +117,10 @@ class ShoppingCart {
         new ElementCreator("li").id(book.cartId)
             .append(new ElementCreator("span").text(book.title))
             .append(new ElementCreator("span").text(`${book.quantity} Pcs. \u2014 ${this.round(book.quantity * book.price)}\u20AC`))
+            .append(new ElementCreator('span').text('🐢').listener('click', () => {
+                this.delete(book);
+                this.showSum();
+            }))
             .appendTo(document.querySelector("aside ul"))
     }
 
