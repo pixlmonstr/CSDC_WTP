@@ -49,6 +49,17 @@ class BookController {
     }
 
     createBook = (req, res) => {
+        if(!this.checkBookProperties(res, req.body)) {
+            return false;
+        }
+
+        let category = model.resolveCategory(req.params.category);
+        if(!category) {
+            res.status(400).send('Invalid category');
+            return false;
+        }
+
+        res.send(model.createBook(category, req.body));
         /* --- Task 2 --- 
          * Add the book given in the request to the model.
          * Check the incoming data! The category must exist, the book data
@@ -60,6 +71,19 @@ class BookController {
     }
 
     updateBook = (req, res) => {
+        if(!this.checkBookProperties(res, req.body, (Number)(req.params.id))) {
+            return false;
+        }
+
+        let book = model.getBook((Number)(req.params.id));
+        if(!book) {
+            res.status(404).send("Book not found");
+            return false;
+        }
+
+        model.updateBook(req.params.id, req.body);
+        res.status(200).send();
+
         /* --- Task 3 --- 
          * Add the book given in the request to the model.
          * Check the incoming data! The book with the given id must exists,
@@ -73,6 +97,21 @@ class BookController {
     }
 
     deleteBook(req, res) {
+        if(!Number.isInteger(+req.params.id)) {
+            res.status(400).send("Id is not an integer");
+            console.log("id is " + typeof(req.params.id));
+            return false;
+        }
+
+        let id = Number.parseInt(req.params.id);
+        if(!model.getBook(id)) {
+            res.status(404).send("Book does not exist.");
+            return false;
+        }
+
+        model.deleteBook(id);
+        res.status(204).send();
+
         /* --- Task 4 --- 
          * Delete the given book from the model.
          * Check the incoming id!

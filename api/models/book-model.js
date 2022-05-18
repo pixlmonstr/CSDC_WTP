@@ -44,6 +44,7 @@ class BookModel {
         }
         book.id = BookModel.BOOK_ID++;
         this.getBooksAsMap(category).set(book.id, book);
+        return book.id;
     }
 
 
@@ -95,15 +96,23 @@ class BookModel {
     }
 
     createBook(category, book) {
+        return this.getBook(this.addBook(category, new Book(book.title, book.cover, book.price, book.description, book.isbn)));
+
         /* --- Task 2 ---
          * Add the received book to the given category in the model and return it. */
     }
 
     updateBook(id, book) {
+        let category = this.getCategory(+id);
+        this.getBooksAsMap(category).set(+id, book);
+
         /* --- Task 3 --- Update the book with the given id in the model */
     }
 
     deleteBook(id) {
+        let category = this.getCategory(+id);
+        this.getBooksAsMap(category).delete(+id);
+
         /* --- Task 4 --- Delete the book with the given id from the model */
     }
 }

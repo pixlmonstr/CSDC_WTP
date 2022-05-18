@@ -7,6 +7,10 @@ routes.get('/categories', controller.getCategories);
 routes.get('/categories/:category/books', controller.getCategoryBooks);
 routes.get('/books/:id', controller.getBook);
 
+routes.post('/categories/:category/books', controller.createBook);
+routes.put('/books/:id', controller.updateBook);
+routes.delete('/books/:id', controller.deleteBook);
+
 /* --- Task 2 --- Add a route to create new books 
    endpoint: /categories/:category/books
  */
